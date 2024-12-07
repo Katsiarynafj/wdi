@@ -1,11 +1,10 @@
 import random
 
-
 file = 'C:\\Users\\Kasia\\Documents\\python learning\\slownik10k.txt'
 
 def wcztywanie_pliku(file):
 	with open(file, encoding='utf-8') as f:
-	    tekst = f.read().splitlines()
+		tekst = f.read().splitlines()
 	return tekst
 
 # print(len(wcztywanie_pliku(file)))
@@ -22,8 +21,8 @@ def anagram_dictionary(file):
 		elif a in anag_dict:
 			anag_dict[a].append(tekst[i])
 	for a in list(anag_dict.keys()):
-	    if len(anag_dict[a]) < 2:
-	        anag_dict.pop(a)
+		if len(anag_dict[a]) < 2:
+			anag_dict.pop(a)
 
 	return anag_dict
 
